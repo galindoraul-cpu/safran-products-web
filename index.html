@@ -3,23 +3,105 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Planta Interactiva</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Safran Products</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <h1>Planta Interactiva</h1>
+    <header>
+        <h1>Unidades de Negocio</h1>
+        <p>Selecciona una unidad para conocer sus productos</p>
+    </header>
 
-    <p>Selecciona una unidad de negocio</p>
 
-    <button onclick="mostrarMensaje()">Unidad de Negocio 1</button>
-    <button>Unidad de Negocio 2</button>
-    <button>Unidad de Negocio 3</button>
-    <button>Unidad de Negocio 4</button>
+    <main>
+
+        <section class="units-container">
+
+            <!-- UNIDAD 1 -->
+            <div class="unit-card" onclick="seleccionarUnidad(1)">
+                <div class="unit-image">
+                    <span>UNIDAD 1</span>
+                </div>
+                <h2>Unidad de Negocio 1</h2>
+            </div>
+
+
+            <!-- UNIDAD 2 -->
+            <div class="unit-card" onclick="seleccionarUnidad(2)">
+                <div class="unit-image">
+                    <span>UNIDAD 2</span>
+                </div>
+                <h2>Unidad de Negocio 2</h2>
+            </div>
+
+
+            <!-- UNIDAD 3 -->
+            <div class="unit-card" onclick="seleccionarUnidad(3)">
+                <div class="unit-image">
+                    <span>UNIDAD 3</span>
+                </div>
+                <h2>Unidad de Negocio 3</h2>
+            </div>
+
+
+            <!-- UNIDAD 4 -->
+            <div class="unit-card" onclick="seleccionarUnidad(4)">
+                <div class="unit-image">
+                    <span>UNIDAD 4</span>
+                </div>
+                <h2>Unidad de Negocio 4</h2>
+            </div>
+
+        </section>
+
+
+        <!-- INFORMACIÓN DE LA UNIDAD -->
+
+        <section id="unit-info" class="unit-info">
+
+            <button class="minimize-button" onclick="minimizarUnidad()">
+                − Minimizar
+            </button>
+
+            <h2 id="unit-title">
+                Unidad de Negocio
+            </h2>
+
+            <p id="unit-description">
+                Aquí aparecerá la información de la unidad seleccionada.
+            </p>
+
+
+            <h3>Productos</h3>
+
+            <div class="products">
+
+                <button class="product-button">
+                    Producto A
+                </button>
+
+                <button class="product-button">
+                    Producto B
+                </button>
+
+                <button class="product-button">
+                    Producto C
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
+
 
     <script src="script.js"></script>
-    
+
 </body>
 
 </html>

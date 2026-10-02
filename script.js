@@ -1,14 +1,10 @@
 function seleccionarUnidad(numero) {
 
-    const panel = document.getElementById("unit-info");
+    const contenedor =
+        document.querySelector(".units-container");
 
-    const titulo = document.getElementById("unit-title");
-
-    const descripcion = document.getElementById("unit-description");
-
-    const contenedor = document.querySelector(".units-container");
-
-    const unidades = document.querySelectorAll(".unit-card");
+    const unidades =
+        document.querySelectorAll(".unit-card");
 
 
     // Quitar selección anterior
@@ -22,44 +18,33 @@ function seleccionarUnidad(numero) {
 
     // Seleccionar la unidad correspondiente
 
-   const unidadSeleccionada = unidades[numero - 1];
+    const unidadSeleccionada =
+        unidades[numero - 1];
 
-unidadSeleccionada.classList.add("selected");
 
-// Mover la unidad seleccionada al principio
-contenedor.prepend(unidadSeleccionada);
-    
-    // Expandir el contenedor
+    unidadSeleccionada.classList.add("selected");
+
+
+    // Activar modo maximizado
 
     contenedor.classList.add("expanded");
-
-
-    // Cambiar información
-
-    titulo.textContent =
-        "Unidad de Negocio " + numero;
-
-
-    descripcion.textContent =
-        "Aquí colocaremos la información de la Unidad de Negocio " +
-        numero +
-        ". Posteriormente agregaremos sus productos, procesos y ubicación dentro de la planta.";
-
-
-    // Mostrar panel
-
-    panel.classList.add("active");
 
 }
 
 
-function minimizarUnidad() {
+function minimizarUnidad(event) {
 
-    const panel = document.getElementById("unit-info");
+    // Evitar que el clic llegue a la tarjeta
 
-    const contenedor = document.querySelector(".units-container");
+    event.stopPropagation();
 
-    const unidades = document.querySelectorAll(".unit-card");
+
+    const contenedor =
+        document.querySelector(".units-container");
+
+
+    const unidades =
+        document.querySelectorAll(".unit-card");
 
 
     // Quitar selección
@@ -71,22 +56,45 @@ function minimizarUnidad() {
     });
 
 
-    // Recuperar el orden original
-
-    unidades.forEach(function(unidad) {
-
-        contenedor.appendChild(unidad);
-
-    });
-
-
-    // Volver a vista original
+    // Regresar a vista original
 
     contenedor.classList.remove("expanded");
 
+}
 
-    // Ocultar información
 
-    panel.classList.remove("active");
+function seleccionarProducto(event, producto) {
+
+    // Evitar que el clic del producto
+    // vuelva a seleccionar la unidad
+
+    event.stopPropagation();
+
+
+    const titulo =
+        document.getElementById("product-title");
+
+    const descripcion =
+        document.getElementById("product-description");
+
+
+    titulo.textContent = producto;
+
+
+    descripcion.textContent =
+        "Aquí colocaremos la información detallada de " +
+        producto +
+        ", incluyendo descripción, características, proceso y ubicación dentro de la planta.";
+
+}
+
+
+function cerrarProducto() {
+
+    const panel =
+        document.getElementById("product-info");
+
+
+    panel.style.display = "none";
 
 }

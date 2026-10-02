@@ -18,86 +18,199 @@
     </header>
 
 
-<main>
+    <main>
 
-    <section class="units-container">
+        <section class="units-container">
 
-        <!-- UNIDAD 1 -->
-        <div class="unit-card" onclick="seleccionarUnidad(1)">
-            <div class="unit-image">
-                <span>UNIDAD 1</span>
+            <!-- UNIDAD 1 -->
+            <div class="unit-card" onclick="seleccionarUnidad(1)">
+
+                <div class="unit-image">
+                    <span>UNIDAD 1</span>
+                </div>
+
+                <div class="unit-content">
+
+                    <h2>Unidad de Negocio 1</h2>
+
+                    <p>
+                        Información general de la Unidad de Negocio 1.
+                    </p>
+
+                    <h3>Productos</h3>
+
+                    <div class="products">
+
+                        <button class="product-button" onclick="seleccionarProducto(event, 'Producto A')">
+                            Producto A
+                        </button>
+
+                        <button class="product-button" onclick="seleccionarProducto(event, 'Producto B')">
+                            Producto B
+                        </button>
+
+                        <button class="product-button" onclick="seleccionarProducto(event, 'Producto C')">
+                            Producto C
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <button class="minimize-button" onclick="minimizarUnidad(event)">
+                    −
+                </button>
+
             </div>
-            <h2>Unidad de Negocio 1</h2>
-        </div>
 
 
-        <!-- UNIDAD 2 -->
-        <div class="unit-card" onclick="seleccionarUnidad(2)">
-            <div class="unit-image">
-                <span>UNIDAD 2</span>
+            <!-- UNIDAD 2 -->
+            <div class="unit-card" onclick="seleccionarUnidad(2)">
+
+                <div class="unit-image">
+                    <span>UNIDAD 2</span>
+                </div>
+
+                <div class="unit-content">
+
+                    <h2>Unidad de Negocio 2</h2>
+
+                    <p>
+                        Información general de la Unidad de Negocio 2.
+                    </p>
+
+                    <h3>Productos</h3>
+
+                    <div class="products">
+
+                        <button class="product-button" onclick="seleccionarProducto(event, 'Producto A')">
+                            Producto A
+                        </button>
+
+                        <button class="product-button" onclick="seleccionarProducto(event, 'Producto B')">
+                            Producto B
+                        </button>
+
+                        <button class="product-button" onclick="seleccionarProducto(event, 'Producto C')">
+                            Producto C
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <button class="minimize-button" onclick="minimizarUnidad(event)">
+                    −
+                </button>
+
             </div>
-            <h2>Unidad de Negocio 2</h2>
-        </div>
 
 
-        <!-- UNIDAD 3 -->
-        <div class="unit-card" onclick="seleccionarUnidad(3)">
-            <div class="unit-image">
-                <span>UNIDAD 3</span>
+            <!-- UNIDAD 3 -->
+            <div class="unit-card" onclick="seleccionarUnidad(3)">
+
+                <div class="unit-image">
+                    <span>UNIDAD 3</span>
+                </div>
+
+                <div class="unit-content">
+
+                    <h2>Unidad de Negocio 3</h2>
+
+                    <p>
+                        Información general de la Unidad de Negocio 3.
+                    </p>
+
+                    <h3>Productos</h3>
+
+                    <div class="products">
+
+                        <button class="product-button" onclick="seleccionarProducto(event, 'Producto A')">
+                            Producto A
+                        </button>
+
+                        <button class="product-button" onclick="seleccionarProducto(event, 'Producto B')">
+                            Producto B
+                        </button>
+
+                        <button class="product-button" onclick="seleccionarProducto(event, 'Producto C')">
+                            Producto C
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <button class="minimize-button" onclick="minimizarUnidad(event)">
+                    −
+                </button>
+
             </div>
-            <h2>Unidad de Negocio 3</h2>
-        </div>
 
 
-        <!-- UNIDAD 4 -->
-        <div class="unit-card" onclick="seleccionarUnidad(4)">
-            <div class="unit-image">
-                <span>UNIDAD 4</span>
+            <!-- UNIDAD 4 -->
+            <div class="unit-card" onclick="seleccionarUnidad(4)">
+
+                <div class="unit-image">
+                    <span>UNIDAD 4</span>
+                </div>
+
+                <div class="unit-content">
+
+                    <h2>Unidad de Negocio 4</h2>
+
+                    <p>
+                        Información general de la Unidad de Negocio 4.
+                    </p>
+
+                    <h3>Productos</h3>
+
+                    <div class="products">
+
+                        <button class="product-button" onclick="seleccionarProducto(event, 'Producto A')">
+                            Producto A
+                        </button>
+
+                        <button class="product-button" onclick="seleccionarProducto(event, 'Producto B')">
+                            Producto B
+                        </button>
+
+                        <button class="product-button" onclick="seleccionarProducto(event, 'Producto C')">
+                            Producto C
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <button class="minimize-button" onclick="minimizarUnidad(event)">
+                    −
+                </button>
+
             </div>
-            <h2>Unidad de Negocio 4</h2>
-        </div>
 
-    </section>
+        </section>
 
 
-    <!-- PANEL DE INFORMACIÓN -->
+        <!-- INFORMACIÓN DEL PRODUCTO -->
 
-    <section id="unit-info" class="unit-info">
+        <section id="product-info" class="product-info">
 
-        <button class="minimize-button" onclick="minimizarUnidad()">
-            − Minimizar
-        </button>
-
-        <h2 id="unit-title">
-            Unidad de Negocio
-        </h2>
-
-        <p id="unit-description">
-            Aquí aparecerá la información de la unidad seleccionada.
-        </p>
-
-
-        <h3>Productos</h3>
-
-        <div class="products">
-
-            <button class="product-button">
-                Producto A
+            <button onclick="cerrarProducto()" class="close-product">
+                ×
             </button>
 
-            <button class="product-button">
-                Producto B
-            </button>
+            <h2 id="product-title">
+                Producto
+            </h2>
 
-            <button class="product-button">
-                Producto C
-            </button>
+            <p id="product-description">
+                Aquí aparecerá la información del producto seleccionado.
+            </p>
 
-        </div>
+        </section>
 
-    </section>
-
-</main>
+    </main>
 
 
     <script src="script.js"></script>

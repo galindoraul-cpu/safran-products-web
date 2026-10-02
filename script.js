@@ -22,11 +22,13 @@ function seleccionarUnidad(numero) {
 
     // Seleccionar la unidad correspondiente
 
-    const unidadSeleccionada = unidades[numero - 1];
+   const unidadSeleccionada = unidades[numero - 1];
 
-    unidadSeleccionada.classList.add("selected");
+unidadSeleccionada.classList.add("selected");
 
-
+// Mover la unidad seleccionada al principio
+contenedor.prepend(unidadSeleccionada);
+    
     // Expandir el contenedor
 
     contenedor.classList.add("expanded");
@@ -65,6 +67,15 @@ function minimizarUnidad() {
     unidades.forEach(function(unidad) {
 
         unidad.classList.remove("selected");
+
+    });
+
+
+    // Recuperar el orden original
+
+    unidades.forEach(function(unidad) {
+
+        contenedor.appendChild(unidad);
 
     });
 

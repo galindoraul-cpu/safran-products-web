@@ -69,23 +69,25 @@ function seleccionarProducto(event, producto) {
     // vuelva a seleccionar la unidad
 
     event.stopPropagation();
+// Identificar la unidad donde se hizo clic
+    const unidad = event.target.closest(".unit-card");
 
+    // Encontrar el espacio de información de esa unidad
+    const detalles = unidad.querySelector(".product-details");
 
-    const titulo =
-        document.getElementById("product-title");
-
-    const descripcion =
-        document.getElementById("product-description");
-
+    // Actualizar el nombre y descripción
+    const titulo = detalles.querySelector(".product-detail-title");
+    const descripcion = detalles.querySelector(".product-detail-description");
 
     titulo.textContent = producto;
-
 
     descripcion.textContent =
         "Aquí colocaremos la información detallada de " +
         producto +
-        ", incluyendo descripción, características, proceso y ubicación dentro de la planta.";
+        ", incluyendo descripción, características, proceso de fabricación y ubicación dentro de la planta.";
 
+    // Mostrar la información
+    detalles.classList.add("active");
 }
 
 
